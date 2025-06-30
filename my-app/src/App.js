@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 // import './App.css';
 
-let API = "https://fakestoreapi.com/products"
+let API = `https://fakestoreapi.com/products`
 
 function App() {
 
   const [data, setData] = useState([])
   const [searchProduct, setSearchProduct] = useState("")
   const [loading, setLoading] = useState(false)
+  const [page, setPage] = useState(1)
+  let limit = data.length
   async function fetchData() {
     setLoading(true)
     try {
 
-      const res = await fetch(API)
+      const res = await fetch(`https://fakestoreapi.com/products`)
       const json = await (res.json())
       setLoading(false)
       console.log(json)
@@ -39,7 +41,7 @@ function App() {
   if (loading) return <h1 className='text-5xl text-center m-4 font-bold text-black '>Loading....</h1>
 
   return (
-    <>
+    <div >
       <h1 className='text-5xl text-center m-4 font-bold text-teal-600 '>Masai E-commerce</h1>
       <div className='m-4'>
         Search:<input className='border-2 px-2 w-42 border-black' type="text" placeholder='get product by title...' value={searchProduct} onChange={(e) => setSearchProduct(e.target.value.toLowerCase())} />
@@ -57,7 +59,7 @@ function App() {
         ))
         }
       </div>
-    </>
+    </div>
   );
 }
 
