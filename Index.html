@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Table</title>
+    <style>
+        /* #heading {
+            text-align: center;
+        } */
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(238, 238, 238);
+        }
+
+        .nested-header {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 id="heading">Document Table</h1> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th rowspan="2">Surname</th>
+                <th colspan="2" class="nested-header">Documents</th>
+            </tr>
+            <tr>
+                <th>Document Name</th>
+                <th>Document Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Jill</td>
+                <td rowspan="3">Smith</td>
+                <td>doc 1</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td>doc 2</td>
+                <td>excel</td>
+            </tr>
+            <tr>
+                <td>doc 3</td>
+                <td>word</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Eve</td>
+                <td rowspan="2">Jackson</td>
+                <td>doc A</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td>doc B</td>
+                <td>text</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

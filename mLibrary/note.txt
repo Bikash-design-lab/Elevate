@@ -1,0 +1,1 @@
+Install command-in-frontend: npm install @google/generative-ai

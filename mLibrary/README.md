@@ -1,12 +1,9 @@
-# React + Vite
+Created frontend useing React:- 
+AI implemented for get recomendation of book's author and book's title from google_gemini. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Install command-in-frontend: npm install @google/generative-ai
+Then create useGemini.js page. path:-src//hooks/useGemini.js
+In product we use the function that was created on useGemini.js page.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+that serves the recomendation and store in one bucket. Then map same to see response.
